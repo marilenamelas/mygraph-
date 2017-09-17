@@ -1,4 +1,5 @@
- use a version that is 0.0001.YYMMDD which is nice for sorting.
+!#/bin/bash 
+use a version that is 0.0001.YYMMDD which is nice for sorting.
 VERS=0.001.170907;  #Always good to version your edits.  Usually, start with 0.001.
 LICENSE='The MIT License (MIT)
 Copyright (c) 2017 David W. Craig
