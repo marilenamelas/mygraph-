@@ -68,3 +68,4 @@ if [ ! -f $GTF ]; then
 fi
 (awk '$3 ~ /gene/ { print $2,$1,$4,$5}' Homo_sapiens.GRCh37.75.gtf | sed 's/ /,/g' | sed -e '1ifeature,chr,start,end'> gene_dist_head.csv)
 exit 0;
+grep -v "^#" Homo_sapiens.GRCh37.75.gtf | awk 'BEGIN { FS="\t" } { print $2,$3,$1,$4,$5 }' | gsed 's/\s/\t/g' | gsed -e '1itranscript_type\tfeature\tchr\tstart\tend'> gene_dist_head.tsv
